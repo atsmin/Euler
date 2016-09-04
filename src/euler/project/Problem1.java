@@ -1,3 +1,5 @@
+package euler.project;
+
 import java.util.stream.*;
 
 public class Problem1 {

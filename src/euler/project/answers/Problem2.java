@@ -1,7 +1,12 @@
-package euler.project;
+package euler.project.answers;
 
 public class Problem2 {
     public static void main(String args[]) {
+        Problem2 problem2 = new Problem2();
+        System.out.print(problem2.solve());
+    }
+    
+    public int solve() {
         int f = 0; 
         int i = 1;
         int sum = 0;
@@ -12,10 +17,10 @@ public class Problem2 {
             }
             i++;
         }
-        System.out.print(sum);
+        return sum;
     }
     
-    static int fib(int n) {
+    public int fib(int n) {
         if (n == 1) {
             return 1;
         } else if (n == 2) {

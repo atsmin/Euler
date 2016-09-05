@@ -1,15 +1,22 @@
-package euler.project;
+package euler.project.answers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
 
 public class Problem4 {
     public static void main(String args[]){
+        Problem4 promlem4 = new Problem4();
         final int N = 3;
+        System.out.print(promlem4.solve(N));
+    }
+    
+    public List<Integer> solve(int N) {
         int start = Integer.parseInt(Strings.repeat("9", N));
         int limit = Integer.parseInt(Strings.repeat("9", N - 1));
 
@@ -28,9 +35,8 @@ public class Problem4 {
               return a[0] - b[0];
            }
         });
-        System.out.println(
-            Arrays.asList(Iterables.getLast(palindromes))
-        );
+        return Arrays.asList(Iterables.getLast(palindromes));
+        
     }
     public static boolean is_palindrome(Integer n) {
         String str = n.toString();

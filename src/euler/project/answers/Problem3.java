@@ -1,14 +1,19 @@
-package euler.project;
+package euler.project.answers;
 
 import java.util.ArrayList;
+import com.google.common.collect.Iterables;
 
 public class Problem3 {
     public static void main(String args[]) {
+        Problem3 problem3 = new Problem3();
+        System.out.print(problem3.solve());
+    }
+    
+    public long solve() {
         long n = 600851475143L;
         PrimeCalculator calculator = new PrimeCalculator();
         ArrayList<Long> factors = calculator.prime_factors(n);
-        System.out.println(factors);
-        System.out.println(factors.get(factors.size() - 1));
+        return Iterables.getLast(factors);
     }
 }
 

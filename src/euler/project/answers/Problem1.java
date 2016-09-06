@@ -9,8 +9,8 @@ public class Problem1 {
     }
     public int solve() {
         int sum = IntStream.range(1,1000)
-                      .filter(x -> x % 3 == 0 || x % 5 == 0)
-                      .sum();
+                           .filter(x -> x % 3 == 0 || x % 5 == 0)
+                           .sum();
         return sum;
     }
 }
